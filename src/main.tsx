@@ -1,16 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import './text.css'
-import App from './App.tsx'
+import './css/index.css'
+import './css/text.css'
+import App from './components/App.tsx'
 
-let content: HTMLElement | null = document.getElementById('content')
+let content: HTMLElement | null = document.getElementById('content');
 if (content != null) {
     createRoot(content).render(
       <StrictMode>
         <App />
       </StrictMode>,
-    )
+    );
 } else {
-    console.log("Content element not found!")
+    content = document.getElementsByName('body').item(0);
 }
