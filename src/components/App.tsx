@@ -1,7 +1,8 @@
 import React from 'react'
 import Typed from 'typed.js'
-import '../css/App.css'
+import Footer from './Footer.tsx'
 
+import '/src/css/App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                     <PageDescription/>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
