@@ -11,7 +11,8 @@ function App() {
     return (
         <>
             <div className="grid-row">
-                <div className="grid-col" id="content">
+                <div className="grid-col">
+                    <PageLogo />
                     <PageTitle/>
                     <PageDescription/>
                 </div>
@@ -24,6 +25,14 @@ function App() {
 function PageTitle() {
     return (
         <div className="page-title chakra-petch-regular">Slush Works</div>
+    )
+}
+
+function PageLogo() {
+    return (
+        <div className="page-logo">
+            <img className="page-logo" src="/src/assets/png/logo.png" alt="Slush Works logo" />
+        </div>
     )
 }
 
