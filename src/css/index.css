@@ -44,6 +44,18 @@ body {
     padding: 1rem;
 }
 
+div.page-logo {
+    display: inline-flex;
+    justify-content: center;
+}
+
+img.page-logo {
+    display: inline-block;
+
+    width: 256px;
+    height: 256px;
+}
+
 .page-desc {
     font-size: 2.5rem;
     display: inline-block;
