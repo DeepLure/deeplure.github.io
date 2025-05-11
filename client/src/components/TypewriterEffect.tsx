@@ -2,10 +2,10 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 
 // Color mapping for different words - exempted from global text color
 const WORD_COLORS = {
-  Democratized: "#dc626d", // Red
-  Simplified: "#54b054",   // Green
-  Organized: "#f7630c",    // Orange
-  default: "white"
+  Democratized: "#d13438", // Red
+  Simplified: "#479ef5",   // Blue
+  Organized: "#54b054",    // Green
+  default: "#ffffff" // White
 };
 
 /**

@@ -26,9 +26,7 @@ export default function Home() {
               <BsHexagonFill size={50} className="text-[#54b054]" />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black font-bold text-sm">DL</div>
             </div>
-            <h1 
-              className="text-5xl md:text-7xl font-bold font-georama tracking-tight"
-            >
+            <h1 className="text-5xl md:text-7xl font-bold font-georama tracking-tight">
               DeepLure
             </h1>
           </div>
@@ -49,7 +47,7 @@ export default function Home() {
       {/* Copyright Footer */}
       <footer className="w-full py-6 mt-auto">
         <p className="text-muted-foreground text-sm font-georama">
-          &copy; {new Date().getFullYear()} Deeplure Research Pvt. Ltd.
+          &copy; {new Date().getFullYear()} DeepLure Research Pvt. Ltd.
         </p>
       </footer>
     </div>
