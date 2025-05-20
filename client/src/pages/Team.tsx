@@ -11,7 +11,7 @@ export default function Team() {
         
         <div className="mb-12">
           <p className="text-lg mb-6 text-muted-foreground">
-            The brilliant minds behind DeepLure's vision for democratizing artificial intelligence.
+            The brilliant minds behind DeepLure's vision for artificial intelligence.
           </p>
         </div>
         
