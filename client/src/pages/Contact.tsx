@@ -1,5 +1,6 @@
 import { MapPin, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import GoogleMapEmbed from "@/components/GoogleMap.tsx";
 
 export default function Contact() {
   return (
@@ -37,16 +38,8 @@ export default function Contact() {
             </CardContent>
           </Card>
 
-          <div
-              className="aspect-video md:aspect-square rounded-lg overflow-hidden bg-accent/30 flex items-center justify-center">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d219.0276331312964!2d77.20238364621345!3d28.556483371355196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce273aefc9451%3A0x585521d70d54537e!2sABL%20workspaces!5e0!3m2!1sen!2sin!4v1747761312430!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"></iframe>
-            {/*<div className="text-center p-4">*/}
-            {/*  <p className="text-primary text-lg">Map Placeholder</p>*/}
-            {/*  <p className="text-muted-foreground text-sm">(Will be replaced with actual map)</p>*/}
-            {/*</div>*/}
+          <div className="aspect-video md:aspect-square rounded-lg overflow-hidden bg-accent/30 flex items-center justify-center">
+            <GoogleMapEmbed />
           </div>
         </div>
 
