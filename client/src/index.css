@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Color theme variables for the application
+ * Using HSL color format for better manipulation with opacity
+ */
+:root {
+  /* Background and foreground colors */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Muted colors for less emphasis */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 0 0% 84%; /* #d6d6d6 with reduced opacity */
+  
+  /* Popover and card colors */
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 84%; /* #d6d6d6 */
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Border and input field colors */
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  
+  /* Primary color scheme - Bright Blue */
+  --primary: 214 100% 80%;
+  --primary-foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Secondary color scheme - Purple */
+  --secondary: 270 73% 75%;
+  --secondary-foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Accent color scheme - Dark blue */
+  --accent: 217 100% 13%;
+  --accent-foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Destructive color for warnings/errors */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 84%; /* #d6d6d6 */
+  
+  /* Focus ring color */
+  --ring: 240 4.9% 83.9%;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+  
+  /* Background gradient colors */
+  --bg-dark: 240 20% 2%;
+  --bg-dark-accent: 240 21% 8%;
+  
+  /* Global text color variable */
+  --text-color: #d6d6d6;
+}
+
+/**
+ * Base layer styles for the application
+ */
+@layer base {
+  /* Apply border color to all elements */
+  * {
+    @apply border-border;
+    color: var(--text-color); /* Apply global text color */
+  }
+
+  /* Main body styling with gradient background */
+  body {
+    @apply font-sans antialiased bg-background;
+    background: linear-gradient(135deg, hsl(var(--bg-dark)) 0%, hsl(var(--bg-dark-accent)) 100%);
+    min-height: 100vh;
+    color: var(--text-color);
+  }
+
+  /* Font family utility classes */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-georama {
+    font-family: 'Georama', sans-serif;
+  }
+  
+  /* Override for headings to ensure consistent color */
+  h1, h2, h3, h4, h5, h6, p, span, div, a {
+    color: var(--text-color);
+  }
+}
+
+/**
+ * Animation for typewriter cursor blinking
+ */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typewriter cursor styling with blink animation */
+.typewriter-cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}

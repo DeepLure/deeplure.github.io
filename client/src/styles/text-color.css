@@ -1,0 +1,33 @@
+/**
+ * Additional CSS for consistent text coloring
+ * Applied to specific components that might override global styling
+ */
+
+/* Add text color to all text-related components from shadcn */
+.text-card-foreground,
+.text-popover-foreground,
+.text-primary,
+.text-secondary,
+.text-muted-foreground,
+.text-accent-foreground,
+.text-destructive-foreground {
+  color: var(--text-color) !important;
+}
+
+/* Ensure input text is also consistent */
+input, 
+textarea, 
+select, 
+button {
+  color: var(--text-color);
+}
+
+/* Force override any inline styles */
+[style*="color"] {
+  color: var(--text-color) !important;
+}
+
+/* Exception for typewriter color changing effect */
+.typewriter-changing-text {
+  color: currentColor !important;
+}

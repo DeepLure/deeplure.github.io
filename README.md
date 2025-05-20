@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+# DeepLure Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic React-based landing page for DeepLure, showcasing the company's AI vision through an engaging typewriter animation and multi-page responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js frontend with TypeScript
+- Responsive dark-themed UI
+- Custom typewriter text effect
+- Multiple pages (Home, Contact, Team, Research)
+- Georama font integration
+- Consistent color theming
 
-## Expanding the ESLint configuration
+## GitHub Pages Deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-- Configure the top-level `parserOptions` property like this:
+### Setup Instructions
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Fork or clone this repository to your GitHub account.
+2. Go to your repository settings -> Pages and set up GitHub Pages.
+3. Make sure to select GitHub Actions as the source.
+4. Update the repository name in the workflow file if needed.
+
+### Custom Domain (Optional)
+
+If you want to use a custom domain:
+
+1. Add your domain in repository settings under GitHub Pages -> Custom domain.
+2. Create a CNAME file in your repository containing your domain name.
+3. Configure your DNS settings to point to GitHub Pages.
+
+## Local Development Setup
+
+### Prerequisites
+
+- Node.js (version 16.x or later)
+- npm (usually comes with Node.js)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd <repository-directory>
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The application will be available at [http://localhost:5000](http://localhost:5000).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Building for Production
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run build
 ```
+
+## Technology Stack
+
+- **Frontend**: React + TypeScript + Vite
+- **UI Components**: Shadcn UI (based on Radix UI)
+- **Styling**: Tailwind CSS
+- **Routing**: Wouter
+- **Backend**: Express.js + TypeScript
+
+## Project Structure
+
+```
+/
+├── client/               # Frontend React application
+│   ├── src/
+│   │   ├── components/   # Reusable UI components
+│   │   ├── hooks/        # Custom React hooks
+│   │   ├── lib/          # Utility functions
+│   │   ├── pages/        # Page components
+│   │   ├── styles/       # CSS files
+│   │   ├── App.tsx       # Main app component
+│   │   ├── index.css     # Global styles
+│   │   └── main.tsx      # Application entry point
+│   └── index.html        # HTML template
+├── server/               # Backend Express server
+├── shared/               # Shared code between client and server
+├── .github/workflows/    # GitHub Actions workflows
+└── package.json          # Dependencies and scripts
+```
+
+## License
+
+MIT License
